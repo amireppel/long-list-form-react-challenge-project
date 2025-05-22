@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import { styled } from '@mui/material/styles';
 import { IconButton } from '@mui/material';
 import DeleteIcon from '@mui/icons-material/Delete';
@@ -9,15 +10,19 @@ const StyledIconButton = styled(IconButton)({
   },
 });
 
-const TrashIconButton = ({ handleClick }) => {
+const TrashIconButton = memo(({ handleClick }) => {
   return (
-    <StyledIconButton aria-label="delete" size="large">
+    <StyledIconButton 
+      aria-label="delete" 
+      size="large"
+      onClick={handleClick} // Removed unnecessary arrow function wrapper
+    >
       <DeleteIcon fontSize="inherit" />
     </StyledIconButton>
   );
-};
+});
 
-// TODO: Implement passed props
+TrashIconButton.displayName = 'TrashIconButton'; // Added for better debugging
 TrashIconButton.defaultProps = {
   handleClick: () => {},
 };

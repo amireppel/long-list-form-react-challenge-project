@@ -1,6 +1,21 @@
 .pageRoot {
   display: flex;
   justify-content: center;
-  padding: 30px;
-  height: calc(100vh - 150px);
+  min-height: calc(100vh - 150px);
+  padding: 40px;  /* Add padding around the entire page */
+  overflow: visible; /* Ensure content isn't cut off */
+}
+
+.contentContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1000px; /* Increased from 800px */
+  overflow: visible; /* Ensure content isn't cut off */
+}
+
+.pageTitle {
+  margin-bottom: 20px;
+  font-size: 24px;
 }

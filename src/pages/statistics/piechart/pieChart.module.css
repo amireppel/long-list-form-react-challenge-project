@@ -1,0 +1,66 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 0 20px;
+    overflow: visible;
+}
+
+.chartTitle {
+    margin-bottom: 10px;
+    /* Reduced margin */
+}
+
+.chartContainer {
+    display: flex;
+    align-items: flex-start;
+    gap: 120px;
+    width: 100%;
+    min-height: 450px;
+    padding: 20px 40px 40px 40px;
+    overflow: visible;
+    position: relative;
+}
+
+
+.slice {
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-box: fill-box;
+    transform-origin: 50% 50%;
+}
+
+.slice:hover {
+    z-index: 10;
+    transform: translateY(-4px);
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+}
+
+.legend {
+    flex: 1;
+    padding: 20px;
+    min-width: 200px;
+}
+
+.legendItem { 
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    gap: 8px;
+}
+
+.colorBox {
+    width: 16px;
+    height: 16px;
+    border-radius: 4px;
+}
+
+svg {
+    width: 400px;
+    height: 400px;
+    margin: 20px;
+    overflow: visible;
+}
